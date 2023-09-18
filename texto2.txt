@@ -1,0 +1,6 @@
+nome 	numero	endereco
+alberto	1	r.a
+bianca	2	r.b
+carlos	3	r.c
+daniel	4	r.d
+elisa	5	r.e
