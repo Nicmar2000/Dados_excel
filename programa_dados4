@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    FILE *file;
+    char linha[1024];
+    char *token;
+    int line=0;
+    int column;
+    char textos[20][3][100];
+
+    file= fopen("texto2.txt","r");
+
+    
+    while(fgets(linha, sizeof(linha), file) != NULL){
+        column=0;
+        token = strtok(linha,"\t");
+        while (token != NULL) {
+            strcpy(textos[line][column], token);
+            token = strtok(NULL,"\t");
+            column++;
+        }
+        line++;
+    }
+
+    for(int i=0; i<=line-1; i++){
+        for(int j=0; j<3; j++){
+            printf("Linha %i coluna %i: %s\n", i+1, j+1, textos[i][j]);
+        }
+        
+    }
+
+    return 0;
+}
