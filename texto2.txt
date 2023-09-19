@@ -1,0 +1,6 @@
+nome 	numero	endereco
+a	1	r a
+b	2	r b
+c	3	r c
+d	4	r d
+e	5	r e
